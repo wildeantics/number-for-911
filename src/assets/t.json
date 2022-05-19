@@ -1,0 +1,14 @@
+{
+  "disclaimer": "The data from this API is provided without any claims of accuracy, you should use this data as guidance, and do your own due diligence.",
+  "error": "",
+  "data": {
+    "country": { "name": "Australia", "ISOCode": "AU", "ISONumeric": "36" },
+    "ambulance": { "all": [""], "gsm": null, "fixed": null },
+    "fire": { "all": [""], "gsm": null, "fixed": null },
+    "police": { "all": [""], "gsm": null, "fixed": null },
+    "dispatch": { "all": null, "gsm": ["112"], "fixed": ["000"] },
+    "member_112": false,
+    "localOnly": false,
+    "nodata": false
+  }
+}
