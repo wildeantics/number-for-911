@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import CountryList from './assets/cc.json'
+import EmergencyNumbers from './assets/ENAPI.json'
 
 function App() {
   const [emergencyNumber, setEmergencyNumber] = useState()
@@ -24,15 +25,16 @@ function App() {
         console.log(error)
       })
   }
-  const getEmergencyNumber = async () => {
-    axios
-      .get(`https://emergencynumberapi.com/api/country/${countryCode}`)
-      .then((response) => {
-        setEmergencyNumber(response.data.fixed)
+  const getEmergencyNumber = () => {
+    EmergencyNumbers.array.forEach((country) => {
+      Object.values(country).every((onlyValues) => {
+        if (onlyValues.includes(countryCode)) {
+          return setEmergencyNumber(country.dispatch.all)
+        } else {
+          return setEmergencyNumber(null)
+        }
       })
-      .catch((error) => {
-        console.log(error)
-      })
+    })
   }
 
   useEffect(() => {
