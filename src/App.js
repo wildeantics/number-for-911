@@ -94,10 +94,10 @@ function App() {
             "There's no emergency number listed here, sorry!"}
         </Typography>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={12} sm={12} md={4}>
+          <Grid item xs={12} sm={12} md='auto'>
             {ambulance && (
               <Card>
-                <CardContent sx={{ height: '180px' }}>
+                <CardContent sx={{ height: '180px', minWidth: '185px' }}>
                   <Typography variant='h5'>
                     Ambulance <LocalHospitalIcon />
                   </Typography>
@@ -108,10 +108,10 @@ function App() {
               </Card>
             )}
           </Grid>
-          <Grid item xs={12} sm={12} md={4}>
+          <Grid item xs={12} sm={12} md='auto'>
             {fire && (
               <Card>
-                <CardContent sx={{ height: '180px' }}>
+                <CardContent sx={{ height: '180px', minWidth: '185px' }}>
                   <Typography variant='h5' gutterBottom>
                     Fire <LocalFireDepartmentIcon />
                   </Typography>
@@ -122,10 +122,10 @@ function App() {
               </Card>
             )}
           </Grid>
-          <Grid item xs={12} sm={12} md={4}>
+          <Grid item xs={12} sm={12} md='auto'>
             {police && (
               <Card>
-                <CardContent sx={{ height: '180px' }}>
+                <CardContent sx={{ height: '180px', minWidth: '185px' }}>
                   <Typography variant='h5' gutterBottom>
                     Police <LocalPoliceIcon />
                   </Typography>
